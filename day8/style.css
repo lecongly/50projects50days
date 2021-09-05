@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: url("https://images.unsplash.com/photo-1586973347379-1d2331302e5c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")
+    no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  color: #fff;
+}
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  width: 100%;
+  padding: 15px;
+  background: lightblue;
+  border: 0;
+  border-radius: 5px;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+.text {
+  margin-top: 30px;
+}
+.container {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px 40px;
+  border-radius: 5px;
+}
+.container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.container a {
+  text-decoration: none;
+  color: #fff;
+}
+.form-control {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 300px;
+}
+.form-control input {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  background: transparent;
+  border-bottom-color: lightblue;
+}
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: lightblue;
+  transform: translateY(-30px);
+}
+.form-control i {
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+  right: 0;
+}
+.form-message {
+  display: block;
+  font-size: 14px;
+  color: rgb(253, 128, 128);
+  margin-top: 4px;
+}

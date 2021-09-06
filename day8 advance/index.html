@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 8 - Form</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/6cfc79b9c2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Register</h1>
+      <form id="form-1">
+        <div class="form-control">
+          <input type="text" id="fullname" name="fullname" required />
+          <label for="fullname">Full Name</label>
+          <span class="form-message"></span>
+        </div>
+        <div class="form-control">
+          <input type="text" id="email" name="email" required />
+          <label for="email">Email</label>
+          <span class="form-message"></span>
+        </div>
+        <div class="form-control">
+          <input type="password" id="password" name="password" required />
+          <label for="password">Password</label>
+          <i class="far fa-eye-slash" id="hide"></i>
+          <i class="far fa-eye" id="show"></i>
+          <span class="form-message"></span>
+        </div>
+        <div class="form-control">
+          <input
+            type="password"
+            id="password_confirmation"
+            name="password_confirmation"
+            required
+          />
+          <label for="password_confirmation">Password Confirm</label>
+          <span class="form-message"></span>
+        </div>
+        <button class="btn">Register</button>
+        <p class="text">You have a account? <a href="#">Login</a></p>
+      </form>
+    </div>
+    <script src="./app.js"></script>
+    <script src="./validator.js"></script>
+    <script>
+      Validator({
+        form: "#form-1",
+        errorSelector: ".form-message",
+        rules: [
+          Validator.isRequired("#fullname"),
+          Validator.isEmail("#email"),
+          Validator.isRequired("#password"),
+        ],
+      });
+    </script>
+  </body>
+</html>

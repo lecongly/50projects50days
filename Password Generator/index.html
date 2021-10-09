@@ -23,23 +23,35 @@
       <div class="settings">
         <div class="setting">
           <label>Password Length</label>
-          <input type="number" id="length" min="1" max="20" value="20" />
+          <input type="number" id="length" min="1" max="20" value="10" />
         </div>
         <div class="setting">
-          <label>Include uppercase letters</label>
-          <input type="checkbox" id="uppercase" checked />
+          <span>Include uppercase letters</span>
+          <input type="checkbox" class="toggle" id="uppercase" checked />
+          <label for="uppercase" class="label">
+            <div class="ball"></div>
+          </label>
         </div>
         <div class="setting">
-          <label>Include lowercase letters</label>
-          <input type="checkbox" id="lowercase" checked />
+          <span>Include lowercase letters</span>
+          <input type="checkbox" class="toggle" id="lowercase" checked />
+          <label for="lowercase" class="label">
+            <div class="ball"></div>
+          </label>
         </div>
         <div class="setting">
-          <label>Include numbers letters</label>
-          <input type="checkbox" id="numbers" checked />
+          <span>Include numbers letters</span>
+          <input type="checkbox" class="toggle" id="numbers" checked />
+          <label for="numbers" class="label">
+            <div class="ball"></div>
+          </label>
         </div>
         <div class="setting">
-          <label>Include symbols letters</label>
-          <input type="checkbox" id="symbols" checked />
+          <span>Include symbols letters</span>
+          <input type="checkbox" class="toggle" id="symbols" checked />
+          <label for="symbols" class="label">
+            <div class="ball"></div>
+          </label>
         </div>
       </div>
       <button class="btn btn-large" id="generate">Generates Password</button>
